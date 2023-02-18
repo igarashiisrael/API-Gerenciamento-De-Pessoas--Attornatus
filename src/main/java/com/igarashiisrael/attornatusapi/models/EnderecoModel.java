@@ -11,7 +11,7 @@ public class EnderecoModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long enderecoId;
 
-    private String Logradouro;
+    private String logradouro;
 
     private String cep;
 
@@ -25,6 +25,18 @@ public class EnderecoModel {
     @JsonIgnoreProperties("endereco")
     private PessoaModel pessoa;
 
+    public EnderecoModel() {
+    }
+
+    public EnderecoModel(Long enderecoId, String logradouro, String cep, String numero, String cidade, boolean enderecoPrincipal) {
+        this.enderecoId = enderecoId;
+        this.logradouro = logradouro;
+        this.cep = cep;
+        this.numero = numero;
+        this.cidade = cidade;
+        this.enderecoPrincipal = enderecoPrincipal;
+    }
+
     public Long getEnderecoId() {
         return enderecoId;
     }
@@ -34,11 +46,11 @@ public class EnderecoModel {
     }
 
     public String getLogradouro() {
-        return Logradouro;
+        return logradouro;
     }
 
     public void setLogradouro(String logradouro) {
-        Logradouro = logradouro;
+        logradouro = logradouro;
     }
 
     public String getCep() {

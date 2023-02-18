@@ -19,12 +19,20 @@ public class PessoaModel {
 
     private String nome;
 
-    @DateTimeFormat(pattern = "dd/MM/yyyy")
     private LocalDate dataNascimento;
 
     @OneToMany(mappedBy = "pessoa", cascade = CascadeType.ALL)
     @JsonIgnoreProperties("pessoa")
     private List<EnderecoModel> endereco;
+
+    public PessoaModel() {
+    }
+
+    public PessoaModel(Long pessoaId, String nome, LocalDate dataNascimento) {
+        this.pessoaId = pessoaId;
+        this.nome = nome;
+        this.dataNascimento = dataNascimento;
+    }
 
     public Long getPessoaId() {
         return pessoaId;
