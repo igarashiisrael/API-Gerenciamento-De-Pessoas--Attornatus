@@ -13,7 +13,7 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("/endereco")
+@RequestMapping("/enderecos")
 @CrossOrigin(origins = "*")
 public class EnderecoController {
 
