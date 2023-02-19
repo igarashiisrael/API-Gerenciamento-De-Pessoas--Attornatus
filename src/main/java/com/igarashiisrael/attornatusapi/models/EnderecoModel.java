@@ -50,7 +50,7 @@ public class EnderecoModel {
     }
 
     public void setLogradouro(String logradouro) {
-        logradouro = logradouro;
+        this.logradouro = logradouro;
     }
 
     public String getCep() {
