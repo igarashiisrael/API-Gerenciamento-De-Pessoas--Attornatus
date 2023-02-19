@@ -12,13 +12,23 @@ git clone https://github.com/igarashiisrael/API-Gerenciamento-De-Pessoas--Attorn
 Endpoints disponíveis:
 
 GET /pessoas: Retorna uma lista com todas as pessoas cadastradas no sistema.
+
 GET /pessoas/nome/{nome}: Retorna uma pessoa específica pelo seu nome.
+
 POST /pessoas/criarPessoa: Cria uma nova pessoa no sistema.
+
 PUT /pessoas/editarPessoa: Atualiza uma pessoa existente no sistema pelo seu ID.
+
 DELETE /pessoas/{id}: Deleta uma pessoa do sistema pelo seu ID.
 
+
+
 GET /enderecos: Retorna uma lista com todos os endereços cadastrados no sistema.
+
 POST /enderecos/criarEndereco: Cria um novo endereço no sistema.
+
 GET /enderecos/{id}: Retorna um endereço especifico pelo seu ID.
+
 PUT /enderecos/editarEndereco: Atualiza um endereço existente no sistema.
+
 Delete /enderecos/{id}: Deleta um endereço do sistema pelo seu ID.
