@@ -1,12 +1,9 @@
 package com.igarashiisrael.attornatusapi.models;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
-import org.springframework.format.annotation.DateTimeFormat;
-
 import java.time.LocalDate;
 import java.util.List;
+
+
 
 @Entity
 @Table(name = "pessoas")
@@ -22,17 +19,24 @@ public class PessoaModel {
     private LocalDate dataNascimento;
 
     @OneToMany(mappedBy = "pessoa", cascade = CascadeType.ALL)
-    @JsonIgnoreProperties("pessoa")
-    private List<EnderecoModel> endereco;
+    private List<EnderecoModel> enderecos;
 
     public PessoaModel() {
     }
+
+    public void atualizarContatos(){
+        for(EnderecoModel end : this.enderecos){
+            end.setPessoa(this);
+        }
+    }
+
 
     public PessoaModel(Long pessoaId, String nome, LocalDate dataNascimento) {
         this.pessoaId = pessoaId;
         this.nome = nome;
         this.dataNascimento = dataNascimento;
     }
+
 
     public Long getPessoaId() {
         return pessoaId;
@@ -59,10 +63,10 @@ public class PessoaModel {
     }
 
     public List<EnderecoModel> getEndereco() {
-        return endereco;
+        return enderecos;
     }
 
     public void setEndereco(List<EnderecoModel> endereco) {
-        this.endereco = endereco;
+        this.enderecos = endereco;
     }
 }

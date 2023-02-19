@@ -10,6 +10,8 @@ import java.util.Optional;
 @Repository
 public interface PessoaRepository extends JpaRepository<PessoaModel, Long> {
 
+
+
     public Optional<PessoaModel> findByNome(String nome);
     public List<PessoaModel> findAllByNomeContainingIgnoreCase(String nome);
 }

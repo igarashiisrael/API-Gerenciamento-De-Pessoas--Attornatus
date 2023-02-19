@@ -28,7 +28,8 @@ public class EnderecoModel {
     public EnderecoModel() {
     }
 
-    public EnderecoModel(Long enderecoId, String logradouro, String cep, String numero, String cidade, boolean enderecoPrincipal) {
+    public EnderecoModel(Long enderecoId, String logradouro, String cep,
+                         String numero, String cidade, boolean enderecoPrincipal) {
         this.enderecoId = enderecoId;
         this.logradouro = logradouro;
         this.cep = cep;
