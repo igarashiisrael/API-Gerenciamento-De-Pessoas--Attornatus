@@ -20,9 +20,9 @@ POST /pessoas/criarPessoa: Cria uma nova pessoa no sistema.
 PUT /pessoas/editarPessoa: Atualiza uma pessoa existente no sistema pelo seu ID.
 
 DELETE /pessoas/{id}: Deleta uma pessoa do sistema pelo seu ID.
-
-
-
+<br/>
+-----------------------------------------------------------------------------------
+<br />
 GET /enderecos: Retorna uma lista com todos os endereços cadastrados no sistema.
 
 POST /enderecos/criarEndereco: Cria um novo endereço no sistema.
