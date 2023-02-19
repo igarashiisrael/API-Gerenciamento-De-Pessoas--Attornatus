@@ -45,7 +45,4 @@ public class EnderecoController {
         repository.deleteById(id);
     }
 
-
-
-
 }

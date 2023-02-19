@@ -29,7 +29,7 @@ public class PessoaController {
     }
 
     @PostMapping("/criarPessoa")
-    public ResponseEntity<PessoaModel> post(@Valid @RequestBody PessoaModel pessoa) {
+    public ResponseEntity<PessoaModel> criarPessoa(@Valid @RequestBody PessoaModel pessoa) {
         pessoa.atualizarContatos();
         return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(pessoa));
     }
